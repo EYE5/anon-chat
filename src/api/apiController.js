@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-const HOST = 'http://localhost:3000';
 class ApiController {
   isUserAlreadyExisted = async (username) => {
     let response;
     try {
-      response = await axios.post(`${HOST}/usercheck`, { username });
+      response = await axios.post('/usercheck', { username });
     } catch (error) {
       console.error(error);
     }
@@ -15,7 +14,7 @@ class ApiController {
    getUsersOnline = async () => {
      let response;
      try {
-       response = await axios.post(`${HOST}/usersonline`);
+       response = await axios.post('/usersonline');
      } catch (error) {
        console.log(error);
      }
@@ -25,7 +24,7 @@ class ApiController {
   setUserOnline = async (username) => {
     let response;
     try {
-      response = await axios.post(`${HOST}/adduser`, { username });
+      response = await axios.post('/adduser', { username });
     } catch (error) {
       console.log(error);
     }

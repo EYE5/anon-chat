@@ -41,7 +41,6 @@ export default {
   },
   methods: {
     setUsername() {
-      console.log('enter clicked');
       this.$store.dispatch('setUserName', this.username);
     },
     checkUsername() {

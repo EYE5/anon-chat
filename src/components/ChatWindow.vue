@@ -4,7 +4,7 @@
           <v-virtual-scroll height="60vh" :item-height="50" :items="items" bench="10">
             <template v-slot="{item}">
               <v-list-item class="pa-0 " >
-                <v-list-item-avatar max-width= "80px" class="ma-2 align-self-center">
+                <v-list-item-avatar max-width= "80px" width="70" class="ma-2 align-self-center">
                   {{item.username}}
                 </v-list-item-avatar>
                 <v-list-item-content class="pa-0">
@@ -51,7 +51,8 @@ export default {
     },
   },
   beforeMount() {
-    this.ws = new WebSocket('ws://localhost:3001');
+    // eslint-disable-next-line no-restricted-globals
+    this.ws = new WebSocket(location.origin.replace(/^http/, 'ws'));
     this.ws.onmessage = (event) => {
       this.$store.dispatch('setMessages', JSON.parse(event.data));
     };
