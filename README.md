@@ -1,9 +1,9 @@
 # anon-chat
-#About
+## About
 
 Simple chat web-app on websockets.
 
-#Libraries & frameworks
+## Libraries & frameworks
 
 * Vue 
 * Vuex
