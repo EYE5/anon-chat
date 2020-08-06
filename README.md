@@ -10,3 +10,6 @@ Simple chat web-app on websockets.
 * Vue router
 * Vuetify
 * Axios
+
+## Test
+https://immense-refuge-59057.herokuapp.com/
